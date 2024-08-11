@@ -94,3 +94,5 @@ def main():
     """
     Demonstrates the usage of the Jar class by creating an instance and performing deposit operations.
     """
+    jar = Jar()  # Create a new Jar instance with the default capacity.
+    print(jar)  # Print the initial state of the jar.
