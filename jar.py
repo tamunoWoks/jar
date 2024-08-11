@@ -20,3 +20,15 @@ class Jar:
         :return: A string with the current number of cookies.
         """
         return "🍪" * self._size
+
+    
+    def deposit(self, n):
+        """
+        Adds cookies to the jar.
+
+        :param n: Number of cookies to add.
+        :raises ValueError: If n is not a positive integer or if adding n cookies would exceed the jar's capacity.
+        """
+        if not isinstance(n, int) or n < 0 or self._size + n > self._capacity:
+            raise ValueError("Deposit error")
+        
