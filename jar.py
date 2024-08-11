@@ -88,3 +88,4 @@ class Jar:
             raise ValueError("@size.setter error")
         if size > self._capacity:
             raise ValueError("@size.setter error")
+        self._size = size  # Update the jar's size.
