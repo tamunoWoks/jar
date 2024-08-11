@@ -66,3 +66,12 @@ class Jar:
         if capacity < self._size:
             raise ValueError("New capacity must be at least the current size")     
         self._capacity = capacity  # Update the jar's capacity.   
+
+    @property
+    def size(self):
+        """
+        Gets the current size of the jar.
+
+        :return: The number of cookies currently in the jar.
+        """
+        return self._size
