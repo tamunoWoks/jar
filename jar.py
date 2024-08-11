@@ -43,4 +43,25 @@ class Jar:
         if n > self._size:
             raise ValueError("Withdraw Error")
         self._size -= n  # Decrease the size by n cookies.
-        
+
+    @property
+    def capacity(self):
+        """
+        Gets the current capacity of the jar.
+
+        :return: The jar's capacity.
+        """
+        return self._capacity
+
+    @capacity.setter
+    def capacity(self, capacity):
+        """
+        Sets a new capacity for the jar.
+
+        :param capacity: New maximum number of cookies the jar can hold.
+        :raises ValueError: If capacity is not an integer, less than 1, or less than the current size.
+        """
+        if not isinstance(capacity, int) or capacity < 1:
+            raise ValueError("@capacity.setter error")
+        if capacity < self._size:
+            raise ValueError("New capacity must be at least the current size")        
