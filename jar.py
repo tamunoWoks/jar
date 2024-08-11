@@ -12,7 +12,6 @@ class Jar:
         self._capacity = capacity  # Set the jar's capacity.
         self._size = 0  # Initialize the jar's size to 0.
 
-    
     def __str__(self):
         """
         Returns a string representation of the jar, displaying cookies as "🍪".
@@ -21,7 +20,6 @@ class Jar:
         """
         return "🍪" * self._size
 
-    
     def deposit(self, n):
         """
         Adds cookies to the jar.
@@ -64,8 +62,8 @@ class Jar:
         if not isinstance(capacity, int) or capacity < 1:
             raise ValueError("@capacity.setter error")
         if capacity < self._size:
-            raise ValueError("New capacity must be at least the current size")     
-        self._capacity = capacity  # Update the jar's capacity.   
+            raise ValueError("New capacity must be at least the current size")
+        self._capacity = capacity  # Update the jar's capacity.
 
     @property
     def size(self):
@@ -75,7 +73,7 @@ class Jar:
         :return: The number of cookies currently in the jar.
         """
         return self._size
-    
+
     @size.setter
     def size(self, size):
         """
@@ -90,6 +88,7 @@ class Jar:
             raise ValueError("@size.setter error")
         self._size = size  # Update the jar's size.
 
+
 def main():
     """
     Demonstrates the usage of the Jar class by creating an instance and performing deposit operations.
@@ -102,6 +101,7 @@ def main():
 
     jar.withdraw(1)  # Withdraw 1 cookie from the jar.
     print(jar)  # Print the state of the jar after withdrawing 1 cookie.
+
 
 if __name__ == "__main__":
     main()
