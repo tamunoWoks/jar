@@ -75,3 +75,16 @@ class Jar:
         :return: The number of cookies currently in the jar.
         """
         return self._size
+    
+    @size.setter
+    def size(self, size):
+        """
+        Sets the current size of the jar.
+
+        :param size: New number of cookies in the jar.
+        :raises ValueError: If size is not a non-negative integer or exceeds the jar's capacity.
+        """
+        if not isinstance(size, int) or size < 0:
+            raise ValueError("@size.setter error")
+        if size > self._capacity:
+            raise ValueError("@size.setter error")
