@@ -32,4 +32,14 @@ class Jar:
         if not isinstance(n, int) or n < 0 or self._size + n > self._capacity:
             raise ValueError("Deposit error")
         self._size += n  # Increase the size by n cookies.
+
+    def withdraw(self, n):
+        """
+        Removes cookies from the jar.
+
+        :param n: Number of cookies to remove.
+        :raises ValueError: If n is greater than the current size of the jar.
+        """
+        if n > self._size:
+            raise ValueError("Withdraw Error")
         
