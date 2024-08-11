@@ -99,3 +99,6 @@ def main():
 
     jar.deposit(3)  # Deposit 3 cookies into the jar.
     print(jar)  # Print the state of the jar after depositing 3 cookies.
+
+    jar.withdraw(1)  # Withdraw 1 cookie from the jar.
+    print(jar)  # Print the state of the jar after withdrawing 1 cookie.
