@@ -11,3 +11,12 @@ class Jar:
             raise ValueError("Invalid number")
         self._capacity = capacity  # Set the jar's capacity.
         self._size = 0  # Initialize the jar's size to 0.
+
+    
+    def __str__(self):
+        """
+        Returns a string representation of the jar, displaying cookies as "🍪".
+
+        :return: A string with the current number of cookies.
+        """
+        return "🍪" * self._size
