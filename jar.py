@@ -64,4 +64,5 @@ class Jar:
         if not isinstance(capacity, int) or capacity < 1:
             raise ValueError("@capacity.setter error")
         if capacity < self._size:
-            raise ValueError("New capacity must be at least the current size")        
+            raise ValueError("New capacity must be at least the current size")     
+        self._capacity = capacity  # Update the jar's capacity.   
