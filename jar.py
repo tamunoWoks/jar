@@ -42,4 +42,5 @@ class Jar:
         """
         if n > self._size:
             raise ValueError("Withdraw Error")
+        self._size -= n  # Decrease the size by n cookies.
         
