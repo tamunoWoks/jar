@@ -89,3 +89,8 @@ class Jar:
         if size > self._capacity:
             raise ValueError("@size.setter error")
         self._size = size  # Update the jar's size.
+
+def main():
+    """
+    Demonstrates the usage of the Jar class by creating an instance and performing deposit operations.
+    """
