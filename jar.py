@@ -96,3 +96,6 @@ def main():
     """
     jar = Jar()  # Create a new Jar instance with the default capacity.
     print(jar)  # Print the initial state of the jar.
+
+    jar.deposit(3)  # Deposit 3 cookies into the jar.
+    print(jar)  # Print the state of the jar after depositing 3 cookies.
