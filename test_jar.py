@@ -70,4 +70,8 @@ def test_size_setter():
     with pytest.raises(ValueError):
         jar.size = 11
 
+    # Test setting size to negative value
+    with pytest.raises(ValueError):
+        jar.size = -1
+
 
