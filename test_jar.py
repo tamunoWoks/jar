@@ -7,3 +7,9 @@ def test_init():
     jar = Jar()
     assert jar.capacity == 12
     assert jar.size == 0
+
+    # Test invalid capacity
+    with pytest.raises(ValueError):
+        Jar(-1)
+    with pytest.raises(ValueError):
+        Jar(0)
