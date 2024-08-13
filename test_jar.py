@@ -59,4 +59,11 @@ def test_capacity_setter():
     with pytest.raises(ValueError):
         jar.capacity = 4
 
+def test_size_setter():
+    # Test setting size directly
+    jar = Jar(10)
+    jar.deposit(5)
+    jar.size = 3
+    assert jar.size == 3
+
 
