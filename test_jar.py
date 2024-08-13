@@ -18,3 +18,12 @@ def test_init():
     jar = Jar(12)
     assert jar.capacity == 12
     assert jar.size == 0
+
+def test_str():
+    # Test the string representation of the jar
+    jar = Jar()
+    assert str(jar) == ""
+    jar.deposit(1)
+    assert str(jar) == "🍪"
+    jar.deposit(11)
+    assert str(jar) == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
