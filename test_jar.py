@@ -45,3 +45,8 @@ def test_withdraw():
     jar.withdraw(1)
     assert jar.size == 3
 
+    # Test withdrawing more than available
+    with pytest.raises(ValueError):
+        jar.withdraw(100)
+
+
