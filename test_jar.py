@@ -66,4 +66,8 @@ def test_size_setter():
     jar.size = 3
     assert jar.size == 3
 
+    # Test setting size greater than capacity
+    with pytest.raises(ValueError):
+        jar.size = 11
+
 
