@@ -27,3 +27,9 @@ def test_str():
     assert str(jar) == "🍪"
     jar.deposit(11)
     assert str(jar) == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
+    
+def test_deposit():
+    # Test depositing cookies
+    jar = Jar()
+    jar.deposit(1)
+    assert jar.size == 1
