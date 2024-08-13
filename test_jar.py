@@ -38,3 +38,10 @@ def test_deposit():
     with pytest.raises(ValueError):
         jar.deposit(20)
 
+def test_withdraw():
+    # Test withdrawing cookies
+    jar = Jar()
+    jar.deposit(4)
+    jar.withdraw(1)
+    assert jar.size == 3
+
