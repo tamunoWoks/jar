@@ -55,4 +55,8 @@ def test_capacity_setter():
     jar.deposit(5)
     assert jar.capacity == 10
 
+    # Test setting capacity less than current size
+    with pytest.raises(ValueError):
+        jar.capacity = 4
+
 
