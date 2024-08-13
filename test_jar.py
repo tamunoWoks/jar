@@ -49,4 +49,10 @@ def test_withdraw():
     with pytest.raises(ValueError):
         jar.withdraw(100)
 
+def test_capacity_setter():
+    # Test setting a new capacity
+    jar = Jar(10)
+    jar.deposit(5)
+    assert jar.capacity == 10
+
 
