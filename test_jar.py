@@ -13,11 +13,12 @@ def test_init():
         Jar(-1)
     with pytest.raises(ValueError):
         Jar(0)
-    
+
     # Test valid initialization
     jar = Jar(12)
     assert jar.capacity == 12
     assert jar.size == 0
+
 
 def test_str():
     # Test the string representation of the jar
@@ -28,6 +29,7 @@ def test_str():
     jar.deposit(11)
     assert str(jar) == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
 
+
 def test_deposit():
     # Test depositing cookies
     jar = Jar()
@@ -37,6 +39,7 @@ def test_deposit():
     # Test exceeding capacity
     with pytest.raises(ValueError):
         jar.deposit(20)
+
 
 def test_withdraw():
     # Test withdrawing cookies
@@ -49,6 +52,7 @@ def test_withdraw():
     with pytest.raises(ValueError):
         jar.withdraw(100)
 
+
 def test_capacity_setter():
     # Test setting a new capacity
     jar = Jar(10)
@@ -58,6 +62,7 @@ def test_capacity_setter():
     # Test setting capacity less than current size
     with pytest.raises(ValueError):
         jar.capacity = 4
+
 
 def test_size_setter():
     # Test setting size directly
@@ -73,5 +78,3 @@ def test_size_setter():
     # Test setting size to negative value
     with pytest.raises(ValueError):
         jar.size = -1
-
-
